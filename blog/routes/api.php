@@ -19,7 +19,7 @@ use App\Http\Controllers\API\BlogController;
 Route::post('login', [AuthController::class, 'signin']);
 Route::post('register', [AuthController::class, 'signup']);
 
-Route::middleware('auth:sanctum')->group(function () {
+Route::middleware('auth:sanctum')->post(function () {
     Route::resource('blog', BlogController::class);
 });
 
